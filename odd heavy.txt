@@ -1,0 +1,57 @@
+#include<stdio.h>
+#include<conio.h>
+int main(){
+	int a[10], n, e[10], o[10], i, j, c=0, d=0, b;
+	printf("enter the numbers in array:");
+	scanf("%d",&n);
+	printf("Enter %d elements in array:",n);
+	for (i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	printf("Given list of numbers:\n");
+	for (i=0;i<n;i++)
+	{
+		printf("%d\t",a[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+		if(a[i]%2==0)
+		{
+			e[i]=a[i];
+			c++;
+		}
+		else
+		{
+			o[i]=a[i];
+			d++;
+		}
+	}
+	
+	if(o==NULL)
+	{
+		printf("The array a is not heavy array\n");
+	}
+	else{
+		for(i=0;i<d;i++)
+		{
+			for(j=0;j<c;j++)
+			{
+				if(o[i]<e[i]){
+					b=0;
+				}
+				else{
+					b=1;
+				}
+			}
+		}
+		if(b==0)
+		{
+			printf("not an odd heavy array\n");
+		}
+		else{
+			printf("the given array is odd heavy array\n");
+		}
+	}
+	return 0;
+}
